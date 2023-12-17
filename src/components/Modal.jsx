@@ -1,11 +1,16 @@
 import logo from "../img/paypal_logo.png";
-import "./Modal.scss"
+import "./Modal.scss";
 
-export function Modal({open,onClose}) {
-  if (!open) return
+export function Modal({ open, onClose }) {
+  if (!open) return;
   return (
     <section className="contenedor" onClick={onClose}>
-      <div className="sub-contenedor" onClick={(e)=>{e.stopPropagation()}}>
+      <div
+        className="sub-contenedor"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="contenido">
           <div className="icon">
             <img src={logo} alt="" width={70} />
@@ -19,7 +24,9 @@ export function Modal({open,onClose}) {
         </div>
         <div className="actions">
           <button className="btn-descargar">Download</button>
-          <button className="btn-volver" onClick={onClose}>Back</button>
+          <button className="btn-volver" onClick={onClose}>
+            Back
+          </button>
         </div>
       </div>
     </section>
